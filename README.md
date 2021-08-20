@@ -1,7 +1,17 @@
 简单实现celery:异步和定时任务
 
-[window]
+项目中各个文件
 
+1.配置文件在celery_app.celeryconfig.py中
+
+2.异步任务为task1.add,task2.py.multiply
+
+3.定时任务为:task1.add,task2.multiply
+
+4.主任务为test_celery.py
+
+
+window环境下启动celery项目过程
 1.首先进入目录启动celery任务模块
 
 $ celery -A  celery_app worker -l info -P eventlet
@@ -10,7 +20,7 @@ $ celery -A  celery_app worker -l info -P eventlet
 
 $ celery beat -A celery_app
 
-3.启动任务
+3.启动主任务
 
 run test_celery.py
 
